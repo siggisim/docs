@@ -4,8 +4,6 @@ title: Storage Configuration
 sidebar_label: Storage
 ---
 
-# Storage Configuration
-
 `storage:` The Storage section configures where and how BuildBuddy will store blob data. **Required**
 
 ## Options
