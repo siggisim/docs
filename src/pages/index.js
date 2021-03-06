@@ -8,32 +8,29 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Easy to Use</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: <>Visibility</>,
+    // imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        The BuildBuddy Results Store and Results UI gives you full visibility into your builds so you can debug failing tests, view invocation details, and track down slow targets.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: <>Performance</>,
+    // imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        With a built-in Remote Build Cache and Remote Build Execution, BuildBuddy gives you the tools to make your whole engineering organization more productive.
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: <>Collaboration</>,
+    // imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Share BuildBuddy links with co-workers to get your problems solved quickly — so you can get back to building.
       </>
     ),
   },
@@ -71,8 +68,8 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/doc1')}>
-              Get Started
+              to={useBaseUrl('docs/introduction')}>
+              View Documentation
             </Link>
           </div>
         </div>

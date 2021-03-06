@@ -1,30 +1,63 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'BuildBuddy',
+  tagline: 'BuildBuddy provides enterprise features for Bazel — the open source build system that allows you to build and test software 10x faster.',
+  url: 'https://buildbuddy.io',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  favicon: 'img/favicon_black.svg',
+  organizationName: 'buildbuddy-io', // Usually your GitHub org/user name.
+  projectName: 'buildbuddy', // Usually your repo name.
   themeConfig: {
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+    colorMode: {
+      // disableSwitch: false,
+      switchConfig: {
+        darkIcon: ' ',
+        lightIcon: ' ',
       },
-      links: [
+    },
+    prism: {
+      additionalLanguages: ['promql'],
+    },
+    navbar: {
+      logo: {
+        alt: 'BuildBuddy Logo',
+        src: 'img/logo.svg',
+        srcDark: 'img/logo_white.svg',
+      },
+      items: [
         {
-          to: 'docs/doc1',
+          to: 'docs/introduction',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://buildbuddy.io/faq',
+          activeBasePath: 'docs',
+          label: 'FAQs',
+          position: 'left',
+        },
+        // {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          href: 'https://github.com/buildbuddy-io/buildbuddy',
           label: 'GitHub',
+          position: 'left',
+        },
+        {
+          href: 'https://buildbuddy.io/pricing',
+          label: 'Pricing',
+          position: 'left',
+        },
+        {
+          href: 'https://app.buildbuddy.io/',
+          label: 'Login',
+          position: 'left',
+        },
+
+        {
+          href: 'https://app.buildbuddy.io/',
+          label: 'Sign Up',
           position: 'right',
+          class: 'sign-up'
         },
       ],
     },
@@ -32,50 +65,108 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/doc1',
+              html: `<a href="/"><img src="/img/logo_white.svg" class="footer-logo" /></a>`,
+            }
+
+          ],
+        },
+        {
+          title: 'Product',
+          items: [
+            {
+              label: 'Get Started',
+              href: 'https://app.buildbuddy.io/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
+              label: 'Documentation',
+              href: 'https://www.buildbuddy.io/docs/',
+            },
+            {
+              label: 'Pricing',
+              href: 'https://www.buildbuddy.io/pricing',
+            },
+            {
+              label: 'Login',
+              href: 'https://app.buildbuddy.io/',
+            },
+            {
+              label: 'Privacy Policy',
+              href: 'https://www.buildbuddy.io/privacy',
+            },
+            {
+              label: 'Terms of Service',
+              href: 'https://www.buildbuddy.io/terms',
             },
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
+          title: 'Company',
           items: [
             {
               label: 'Blog',
-              to: 'blog',
+              href: 'https://www.buildbuddy.io/blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Report an Issue',
+              href: 'https://github.com/buildbuddy-io/buildbuddy/issues/new',
+            },
+            {
+              label: 'Contact Us',
+              href: 'https://www.buildbuddy.io/contact',
+            },
+            {
+              label: 'Our Team',
+              href: 'https://www.buildbuddy.io/team',
+            },
+            {
+              label: 'Careers',
+              href: 'https://www.buildbuddy.io/careers',
             },
           ],
         },
+        {
+          title: 'Security',
+          items: [
+            {
+              label: 'Security Overview',
+              href: 'https://www.buildbuddy.io/security',
+            },
+            {
+              label: 'Security Updates',
+              href: 'https://www.buildbuddy.io/security-updates',
+            },
+            {
+              label: 'Report a Vulnerability',
+              href: 'https://www.buildbuddy.io/security-vulnerability-report',
+            },
+          ],
+        },
+        {
+          title: 'Connect',
+          items: [
+            {
+              label: 'Slack',
+              href: 'http://slack.buildbuddy.io/',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/buildbuddy_io',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'http://linkedin.com/company/buildbuddy',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/buildbuddy-io',
+            },
+          ],
+        },
+        
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Iteration, Inc.`,
     },
   },
   presets: [
@@ -86,17 +177,35 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          'https://github.com/buildbuddy-io/buildbuddy/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/buildbuddy-io/buildbuddy/edit/master/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./src/css/footer.css'),
+            require.resolve('./src/css/general.css'),
+            require.resolve('./src/css/markdown.css'),
+            require.resolve('./src/css/navbar.css'),
+          ],
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/docs/introduction',
+            from: '/docs',
+          },
+        ],
       },
     ],
   ],
