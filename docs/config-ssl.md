@@ -4,8 +4,6 @@ title: SSL Configuration
 sidebar_label: SSL
 ---
 
-# SSL Configuration
-
 ## Section
 
 `ssl:` The SSL section enables SSL/TLS on build event protocol and remote cache gRPC connections (gRPCS). **Optional**

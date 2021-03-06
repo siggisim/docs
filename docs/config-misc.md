@@ -4,8 +4,6 @@ title: Miscellaneous Configuration
 sidebar_label: Misc
 ---
 
-# Miscellaneous Configuration
-
 ## BuildEventProxy Section
 
 `build_event_proxy:` The BuildEventProxy section configures proxy behavior, allowing BuildBuddy to forward build events to other build-event-protocol compatible servers. **Optional**

@@ -66,6 +66,7 @@ module.exports = {
         {
           items: [
             {
+              // TODO make this relative to base url.
               html: `<a href="/"><img src="/img/logo_white.svg" class="footer-logo" /></a>`,
             }
 
