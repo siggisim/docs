@@ -8,7 +8,6 @@ module.exports = {
   projectName: 'buildbuddy', // Usually your repo name.
   themeConfig: {
     colorMode: {
-      // disableSwitch: false,
       switchConfig: {
         darkIcon: ' ',
         lightIcon: ' ',
