@@ -2,7 +2,7 @@ module.exports = {
   title: 'BuildBuddy',
   tagline: 'BuildBuddy provides enterprise features for Bazel — the open source build system that allows you to build and test software 10x faster.',
   url: 'https://buildbuddy.io',
-  baseUrl: '/',
+  baseUrl: '/buildbuddy/',
   favicon: 'img/favicon_black.svg',
   organizationName: 'buildbuddy-io', // Usually your GitHub org/user name.
   projectName: 'buildbuddy', // Usually your repo name.
