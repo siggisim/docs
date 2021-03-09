@@ -5,8 +5,8 @@ module.exports = {
   url: 'https://buildbuddy.io',
   baseUrl: baseUrl,
   favicon: 'img/favicon_black.svg',
-  organizationName: 'buildbuddy-io', // Usually your GitHub org/user name.
-  projectName: 'buildbuddy', // Usually your repo name.
+  organizationName: 'buildbuddy-io',
+  projectName: 'buildbuddy',
   themeConfig: {
     colorMode: {
       switchConfig: {
