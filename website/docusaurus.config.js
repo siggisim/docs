@@ -1,4 +1,4 @@
-const baseUrl = "/docs/";
+const baseUrl = "/";
 module.exports = {
   title: 'BuildBuddy',
   tagline: 'BuildBuddy provides enterprise features for Bazel — the open source build system that allows you to build and test software 10x faster.',
@@ -22,21 +22,20 @@ module.exports = {
         alt: 'BuildBuddy Logo',
         src: 'img/logo.svg',
         srcDark: 'img/logo_white.svg',
+        href: 'https://www.buildbuddy.io'
       },
       items: [
         {
-          to: 'docs/introduction',
-          activeBasePath: 'docs',
+          to: '/docs/introduction',
+          activeBasePath: '/docs/',
           label: 'Docs',
           position: 'left',
         },
         {
           href: 'https://buildbuddy.io/faq',
-          activeBasePath: 'docs',
           label: 'FAQs',
           position: 'left',
         },
-        // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/buildbuddy-io/buildbuddy',
           label: 'GitHub',
@@ -174,14 +173,13 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          path: '../docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
           'https://github.com/buildbuddy-io/buildbuddy/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
             'https://github.com/buildbuddy-io/buildbuddy/edit/master/',
         },
@@ -203,7 +201,7 @@ module.exports = {
         redirects: [
           {
             to: '/docs/introduction',
-            from: '/docs',
+            from: ['/', '/docs'],
           },
         ],
       },
